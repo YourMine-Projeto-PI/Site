@@ -130,12 +130,12 @@ button:active {
     top: -110px;
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
-    color: #000000;
-    font-weight: 700;
+    color: #ffffff;
+    font-weight: 900;
     padding: 25px;
     border: 5px solid #000000;
     border-radius: 50px;
-    background-image: url(placa_de_fundo.png);
+    background-image: url(../imagens/placa_de_fundo.png);
 }
 .a{
     text-decoration: none;
@@ -146,10 +146,24 @@ button:active {
     display: flex;
     position: relative;
     top: -135px;
+    color: #ffffff;
 }
 .sobremim{
     justify-content: center;
     display: flex;
     position: relative;
     top: -107px;
+    color: #ffffff;
+}
+.textoSobre{
+    position: relative;
+    top: -110px;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    font-weight: 900;
+    padding: 25px;
+    border: 5px solid #000000;
+    border-radius: 50px;
+    background-image: url(../imagens/placa_de_fundo.png);
 }

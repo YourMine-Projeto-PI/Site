@@ -31,7 +31,7 @@ body {
 }
 
 .navbar {
-    width: 300px;
+    width: 550px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -133,9 +133,11 @@ button:active {
     color: #ffffff;
     font-weight: 900;
     padding: 25px;
-    border: 5px solid #000000;
+    /* border: 5px solid #000000; */
     border-radius: 50px;
     background-image: url(../imagens/placa_de_fundo.png);
+    padding: 50px;
+    margin: 50px;
 }
 .a{
     text-decoration: none;
@@ -147,23 +149,63 @@ button:active {
     position: relative;
     top: -135px;
     color: #ffffff;
+    font-size: 50px;
 }
 .sobremim{
     justify-content: center;
     display: flex;
     position: relative;
-    top: -107px;
+    top: -50px;
     color: #ffffff;
+    font-size: 50px;
 }
 .textoSobre{
     position: relative;
-    top: -110px;
+    bottom: auto;
     font-size: 25px;
     font-family: 'Courier New', Courier, monospace;
     color: #ffffff;
     font-weight: 900;
     padding: 25px;
-    border: 5px solid #000000;
+    /* border: 5px solid #000000; */
     border-radius: 50px;
     background-image: url(../imagens/placa_de_fundo.png);
+    padding: 45px;
+    margin: 50px;
+}
+.foto{
+    width: 300px;
+    border-radius: 15px;
+    border: #000000 solid 3px;
+    margin: 50px;
+    position: relative;
+}
+.decoração{
+    color: #000000;
+    font-weight: 600;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.fotos{
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    border: #000000 solid 3px;
+    display: flex;
+    justify-content: space-between;
+}
+.final{
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around; 
+    margin: 50px;
+}
+.sobreJogo{
+    display: flex;
+    font-size: 50px;
+    font-weight: 900;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
 }

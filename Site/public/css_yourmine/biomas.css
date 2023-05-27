@@ -78,3 +78,25 @@ body {
     color: #ffffff;
     font-size: 50px;
 }
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    border-top: 3px solid #ffffff;
+}
+
+.footer {
+    width: 100%;
+    background-color: #5F8439;
+    color: #fff;
+}
+
+.footer h4 {
+    margin: 0;
+}
+
+.footer .container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}

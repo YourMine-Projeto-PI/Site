@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro</title>
+    <link rel="shortcut icon" href="../imagens/logo.png" type="image/x-icon">
+</head>
+<link rel="stylesheet" href="css_yourmine/telaCadastro.css">
+
+<body>
+    <div class="container">
+        <div class="caixaCadastro">
+            <span class="Escrita">Cadastro</span>
+            <input class="inputCadastro" id="ipt_email" placeholder="Email"><br>
+            <input class="inputCadastro" id="ipt_nome" placeholder="Nome"><br>
+            <input class="inputCadastro" id="ipt_sobrenome" placeholder="Sobrenome"><br>
+            <input class="inputCadastro" id="ipt_nick" placeholder="Nick"><br>
+            <input class="inputCadastro" type="password" id="ipt_senha" placeholder="senha"><br>
+                <select name="analise" id="analise">
+                    <option value="1">Hypixel</option>
+                    <option value="2">MC central</option>
+                    <option value="3">CubeCraft</option>
+                    <option value="4">Hylex</option>
+                    <option value="5">CraftLandia</option>
+                    <option value="6">RedeSky</option>
+                    <option value="7">Mush</option>
+                </select>
+            <div class="button"><button onclick="cadastrar()" class="inputCadastro">
+                Cadastrar</button></div>
+        </div>
+
+        <div class="transparente">
+                <div style="display: flex; justify-content: space-evenly; margin: auto;" >
+                    <a href="index.html"><img width="200px" src="../imagens/logo.png" alt=""></a></div><br><br>
+            <div class="EscritaYourmine"><img src="../imagens/mineLetra5.png" alt=""></div>
+
+            <div id="div_mensagem"></div>
+        </div>
+    </div>
+<div class="footer">
+        <div class="container" >
+        <h4>Direitos Reservados YourMine &copy; 2023</h4>
+        </div>
+</div>
+</body>
+</html> 
+<script>
+    function cadastrar() {
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var emailVar = ipt_email.value;
+        var nomeVar = ipt_nome.value;
+        var sobrenomeVar = ipt_sobrenome.value
+        var nickVar = ipt_nick.value
+        var senhaVar = ipt_senha.value;
+        var analiseVar = analise.value;
+
+        if (emailVar == "" || nomeVar == "" || sobrenomeVar =="" || nickVar == "" || senhaVar == "" || analiseVar == "") {
+            alert("preencha todos os campos!!")
+
+            finalizarAguardar();
+            return false;
+        } else if(nomeVar.length < 3){
+            alert("seu nome tem que ter no minimo 3 letras!!!")
+        }else if (emailVar.indexOf("gmail") == -1 && emailVar.indexOf("@") == -1 && emailVar.indexOf(".com") ==-1) {
+            alert("email cadastrado é invalido!!")
+        }else {
+            setInterval('oi', 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                emailServer: emailVar,
+                nomeServer: nomeVar,
+                sobrenomeServer: sobrenomeVar,
+                nickServer: nickVar,
+                senhaServer: senhaVar,
+                analiseServer: analiseVar
+
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                alert("parabens cadastro realizado com sucesso")
+                // cardErro.style.display = "block";
+
+                // mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                alert ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
+
+</script>

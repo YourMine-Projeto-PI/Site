@@ -5,118 +5,76 @@ body {
   background-color: #355B09;
 }
 
-.caixaCadastro {
-  width: 300px;
-  height: 370px;
-  display: flex;
-  background-color: #737373;
-  border: 5px solid #000000;
-  margin: auto;
-  display: block;
-  border-radius: 30px;
-}
-
 .container {
-  width: auto;
-  border: 5px solid transparent;
-  display: flex;
-  justify-content: space-evenly;
-  height: 500px;
-  align-items: center;
-}
-
-.inputCadastro {
-  margin: auto;
-  display: block;
-  border-radius: 10px;
-  border: 2px solid #000000;
-  height: 30px;
-  text-align: center;
-}
-
-.Escrita {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  text-align: center;
-  font-size: 20px;
-  margin: 0;
-  display: block;
-  font-weight: 500;
-}
-
-.EscritaYourmine {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #000000;
-  font-weight: 500;
-  font-size: 50px;
+  width: 80%;
   margin: auto;
   display: flex;
-  justify-content: space-evenly;
 }
 
-.transparente {
-  width: 300px;
-  height: 300px;
-  display: block;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 30px;
-  margin: auto;
-  display: block;
-  align-items: center;
-}
-
-button {
-  position: relative;
-  display: inline-block;
-  margin: 15px;
-  padding: 15px 30px;
-  text-align: center;
-  font-size: 18px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: #000000;
-  background: #603009;
-  cursor: pointer;
-  transition: ease-out 0.5s;
-  border: 5px solid #000000;
-  border-radius: 10px;
-  box-shadow: inset 0 0 0 0 #8F570D;
-  line-height: 0;
-}
-
-button:hover {
-  color: black;
-  box-shadow: inset 0 -100px 0 0 #402215;
-}
-
-button:active {
-  transform: scale(0.9);
-}
-
-button a {
-  text-decoration: none;
-  color: #000000;
-}
-
-.footer {
-  text-align: center;
-  padding: 40px 0;
-  border-top: 3px solid #ffffff;
-}
-
-.footer {
-  width: 100%;
+.header {
+  border-bottom: 3px solid #ffffff;
   background-color: #5F8439;
-  color: #fff;
 }
 
-.footer h4 {
-  margin: 0;
+.header .container {
+  justify-content: space-between;
 }
 
-.footer .container {
+.header a {
+  text-decoration: none;
+  color: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.agora {
+  font-weight: 800;
+}
+
+.navbar {
+  width: 550px;
+  display: flex;
   align-items: center;
+  justify-content: end;
+  /* list-style: none; */
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 25px;
+}
+.titulo {
+  color: #000000;
+  width: fit-content;
+  font-weight: 800;
+  margin: initial;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-self: baseline;
+}
+.texto {
+  position: relative;
+  bottom: auto;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+  font-weight: 900;
+  padding: 25px;
+  /* border: 5px solid #000000; */
+  border-radius: 50px;
+  background-image: url(../imagens/placa_de_fundo.png);
+  padding: 45px;
+  margin: 50px;
+}
+
+.foto {
+  width: 300px;
+  border-radius: 15px;
+  border: #000000 solid 3px;
+  margin: 50px;
+  position: relative;
+}
+.biomas {
   justify-content: center;
-  flex-direction: column;
-  height: 100%;
+  display: flex;
+  top: -50px;
+  color: #ffffff;
+  font-size: 50px;
 }

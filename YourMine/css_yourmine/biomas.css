@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #355B09;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.header {
+    border-bottom: 3px solid #ffffff;
+    background-color: #5F8439;
+}
+
+.header .container {
+    justify-content: space-between;
+}
+
+.header a {
+    text-decoration: none;
+    color: #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.agora {
+    font-weight: 800;
+}
+
+.navbar {
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    /* list-style: none; */
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 25px;
+}
+.titulo {
+    color: #000000;
+    width: fit-content;
+    font-weight: 800;
+    margin: initial;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-self: baseline;
+}
+.texto {
+    position: relative;
+    bottom: auto;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    font-weight: 900;
+    padding: 25px;
+    /* border: 5px solid #000000; */
+    border-radius: 50px;
+    background-image: url(../imagens/placa_de_fundo.png);
+    padding: 45px;
+    margin: 50px;
+}
+
+.foto {
+    width: 300px;
+    border-radius: 15px;
+    border: #000000 solid 3px;
+    margin: 50px;
+    position: relative;
+}
+.biomas {
+    justify-content: center;
+    display: flex;
+    top: -50px;
+    color: #ffffff;
+    font-size: 50px;
+}

@@ -62,12 +62,14 @@
         if (emailVar == "" || nomeVar == "" || sobrenomeVar =="" || nickVar == "" || senhaVar == "" || analiseVar == "") {
             alert("preencha todos os campos!!")
 
-            finalizarAguardar();
+            // finalizarAguardar();
             return false;
         } else if(nomeVar.length < 3){
             alert("seu nome tem que ter no minimo 3 letras!!!")
+            return false;
         }else if (emailVar.indexOf("gmail") == -1 && emailVar.indexOf("@") == -1 && emailVar.indexOf(".com") ==-1) {
             alert("email cadastrado é invalido!!")
+            return false;
         }else {
             setInterval('oi', 5000)
         }

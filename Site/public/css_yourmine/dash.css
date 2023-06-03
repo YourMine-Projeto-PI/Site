@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
-    background-color: #355B09;
+    background-color: #e1fac5;
 }
 
 .container {
@@ -40,6 +40,7 @@ body {
     font-weight: 800;
     font-size: 25px;
 }
+
 .titulo {
     color: #000000;
     width: fit-content;
@@ -49,34 +50,7 @@ body {
     display: flex;
     align-self: baseline;
 }
-.texto {
-    position: relative;
-    bottom: auto;
-    font-size: 25px;
-    font-family: 'Courier New', Courier, monospace;
-    color: #ffffff;
-    font-weight: 900;
-    padding: 25px;
-    border-radius: 50px;
-    background-image: url(../imagens/placa_de_fundo.png);
-    padding: 45px;
-    margin: 50px;
-}
 
-.foto {
-    width: 300px;
-    border-radius: 15px;
-    border: #000000 solid 3px;
-    margin: 50px;
-    position: relative;
-}
-.biomas {
-    justify-content: center;
-    display: flex;
-    top: -50px;
-    color: #ffffff;
-    font-size: 50px;
-}
 .footer {
     text-align: center;
     padding: 40px 0;
@@ -98,4 +72,10 @@ body {
     justify-content: center;
     flex-direction: column;
     height: 100%;
+}
+.letras {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000000;
+    font-weight: 900;
 }

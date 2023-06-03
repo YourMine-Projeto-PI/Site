@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css_yourmine/dash.css">
+    <link rel="shortcut icon" href="imagens/logo.png" type="image/x-icon">
 </head>
     <!-- scripts do Chart.js - 2022-1 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -14,12 +16,32 @@
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
 <body>
-    <div class="graficos" id="grafico_personagem"><canvas id="myChart"></canvas></div>
+    <div class="header">
+        <div class="container">
+            <div style="display: flex; margin-top: 16px;">
+                <a href="index.html"><img class="titulo" src="imagens/logo.png" width="50px"
+                        height="50px">
+                </a>
+                <h1 class="titulo">YourMine</h1>
+            </div>
+            <ul class="navbar">
+                <li class="agora">
+                    <a href="index.html">sair</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="text-align: center;" class="letras">
+        <span>Bem-vindo</span>
+        <span id="b_usuario"></span>
+    </div>
+    <div class="graficos" id="graficos_servidores"><canvas id="myChart"></canvas></div>
+    <div class="footer">
+        <div class="container" >
+        <h4>Direitos Reservados YourMine &copy; 2023</h4>
+        </div>
+    </div>
 </body>
-<div class="texto-user">
-    <span>Bem-vindo</span>
-    <span id="b_usuario"></span>
-</div>
 </html>
 <script>
 
@@ -71,9 +93,9 @@
                     data: []
                 },
                 {
-                    yAxisID: 'y-totalpersonagens',
-                    label: 'Personagem Favorito',
-                    backgroundColor: ['#FF1493', '#FFFF00', '#FF4500', '#00FF00', '#4B0082', '#0000FF', '#FFF', '#ADD8e6', '#FF007F', '#008000'],
+                    yAxisID: 'y-totaldeservidores',
+                    label: 'Servidor Favorito',
+                    backgroundColor: ['#603009', '#5F8439', '#000000', '#FFFFFF', '#737373', '#8F570D', '#402215',],
                     fill: true,
                     data: []
                 }
@@ -103,7 +125,7 @@
                 stacked: false,
                 title: {
                     display: true,
-                    text: 'Os Personagens mais Escolhidos'
+                    text: 'Os servidores mais Escolhidos'
                 },
 
                 scales: {
@@ -111,7 +133,7 @@
                         type: 'linear',
                         display: true,
                         position: 'left',
-                        id: 'y-totalpersonagens',
+                        id: 'y-totaldeservidores',
                         ticks: {
                             beginAtZero: true,
                             max: 15,

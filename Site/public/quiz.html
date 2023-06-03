@@ -30,82 +30,80 @@
     <h1><img src="imagens/mineLetra4.png" alt=""></h1>
 
 
-<div class="tudo">
-    <section name="" id=""> <h1 class="quiztitulo">qual a picareta que faz dropar ferro no começo do jogo?</h1>
+<div class="tudo"> 
+
+            <h1 class="quiztitulo">qual a picareta que faz dropar ferro no começo do jogo?</h1>
 
         <label class="letras">Picareta de Madeira</label>
-        <input type="radio" name="questao1" value="1"><br>
+        <input type="radio" name="questao1" value="madeira"><br>
 
         <label class="letras">Picareta de Pedra</label>
-        <input type="radio" name="questao1" value="2"><br>
+        <input type="radio" name="questao1" value="pedra"><br>
 
         <label class="letras">Picareta de ouro</label>
-        <input type="radio" name="questao1" value="3"><br>
+        <input type="radio" name="questao1" value="ouro"><br>
 
         <label class="letras">Na Mão</label>
-        <input type="radio" name="questao1" value="4"><br>
+        <input type="radio" name="questao1" value="mao"><br>
 
-    </section>
-    <section name="" id=""> <h1 class="quiztitulo">Qual a altura que o personagem pode morrer se não estiver com a armadura?</h1>
+             <h1 class="quiztitulo">Qual a altura que o personagem pode morrer se não estiver com a armadura?</h1>
         
         <label class="letras">24 Blocos</label>
-        <input type="radio" name="questao2" value="1"><br>
+        <input type="radio" name="questao2" value="24"><br>
 
         <label class="letras">20 Blocos</label>
-        <input type="radio" name="questao2" value="2"><br>
+        <input type="radio" name="questao2" value="20"><br>
 
         <label class="letras">12 Blocos</label>
-        <input type="radio" name="questao2" value="3"><br>
+        <input type="radio" name="questao2" value="12"><br>
 
         <label class="letras">55 blocos</label>
-        <input type="radio" name="questao2" value="4"><br>
+        <input type="radio" name="questao2" value="55"><br>
 
-    </section>
-    <section name="" id=""> <h1 class="quiztitulo">Qual o alimento que chama a atenção da vaca?</h1>
+            <h1 class="quiztitulo">Qual o alimento que chama a atenção da vaca?</h1>
         
         <label class="letras">Trigo</label>
-        <input type="radio" name="questao3" value="1"><br>
+        <input type="radio" name="questao3" value="trigo"><br>
 
         <label class="letras">Semente</label>
-        <input type="radio" name="questao3" value="2"><br>
+        <input type="radio" name="questao3" value="semente"><br>
 
         <label class="letras">Carne</label>
-        <input type="radio" name="questao3" value="3"><br>
+        <input type="radio" name="questao3" value="carne"><br>
 
         <label class="letras">Bolo</label>
-        <input type="radio" name="questao3" value="4"><br>
+        <input type="radio" name="questao3" value="bolo"><br>
 
-    </section>
-    <section name="" id=""> <h1 class="quiztitulo">Qual o Mob que defende a vila?</h1>
+             <h1 class="quiztitulo">Qual o Mob que defende a vila?</h1>
         
         <label class="letras">Zombie</label>
-        <input type="radio" name="questao4" value="1"><br>
+        <input type="radio" name="questao4" value="Zombie"><br>
 
         <label class="letras">Iron Golem</label>
-        <input type="radio" name="questao4" value="2"><br>
+        <input type="radio" name="questao4" value="iron"><br>
 
         <label class="letras">Esqueleto</label>
-        <input type="radio" name="questao4" value="3"><br>
+        <input type="radio" name="questao4" value="Esqueleto"><br>
 
         <label class="letras">Enderman</label>
-        <input type="radio" name="questao4" value="4"><br>
+        <input type="radio" name="questao4" value="Enderman"><br>
 
-    </section>
-    <section name="" id=""> <h1 class="quiztitulo">Qual picareta quebra obsidian?</h1>
+             <h1 class="quiztitulo">Qual picareta quebra obsidian?</h1>
         
         <label class="letras">Picareta de Diamante</label>
-        <input type="radio" name="questao5" value="1"><br>
+        <input type="radio" name="questao5" value="pic_diamante"><br>
 
         <label class="letras">Picareta de Ouro</label>
-        <input type="radio" name="questao5" value="2"><br>
+        <input type="radio" name="questao5" value="pic_ouro"><br>
 
         <label class="letras">Picareta De Ferro</label>
-        <input type="radio" name="questao5" value="3"><br>
+        <input type="radio" name="questao5" value="pic_ferro"><br>
 
         <label class="letras">Picareta de Madeira</label>
-        <input type="radio" name="questao5" value="4"><br>
+        <input type="radio" name="questao5" value="pic_madeira"><br>
 
-    </section>
+        <br><button class="button" onclick="validar()">Resultado</button>
+        <div class="texto" id="acertou"></div>
 </div>
 <div class="footer">
     <div class="container" >
@@ -118,4 +116,44 @@
 </html>
 <script>
 
+    var pontos = 0
+
+    var Usuario = 0
+
+    var radios = []
+
+    var respostas = [
+        'pedra','24','trigo','iron','pic_diamante'
+        ]
+    function validar(){
+
+        acertou.innerHTML = ""
+
+        radios = document.querySelectorAll("input[type='radio']:checked")
+
+        if(radios.length < respostas.length){
+            alert("não respondeu todas as questoes")
+        }else {
+            Usuario = 0;
+            for (var contador = 0; contador < radios.length; contador++) {
+                if (respostas.indexOf(radios[contador].value) >= 0) {
+                    Usuario++;
+            }
+        }
+        pontos = Usuario * 5
+    }
+        if(Usuario == 5){
+            acertou.innerHTML = "acertou todas"
+        }else if(Usuario == 4){
+            acertou.innerHTML = "errou 1/5"
+        }else if(Usuario == 3){
+            acertou.innerHTML = "errou 2/5"
+        }else if(Usuario == 2){
+            acertou.innerHTML = "errrou 3/5"
+        }else if(Usuario == 1){
+            acertou.innerHTML = "errou 4/5"
+        }else {
+            acertou.innerHTML = "errou todas"
+        }
+}
 </script>

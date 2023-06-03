@@ -100,3 +100,50 @@ body {
     color: #ffffff;
     font-size: 50px;
 }
+
+.texto {
+    position: relative;
+    bottom: auto;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    font-weight: 900;
+    padding: 25px;
+    border-radius: 50px;
+    background-image: url(../imagens/placa_de_fundo.png);
+    padding: 45px;
+    margin: 50px;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #000000;
+    background: #603009;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #8F570D;
+    line-height: 0;
+}
+
+button:hover {
+    color: black;
+    box-shadow: inset 0 -100px 0 0 #402215;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+button a {
+    text-decoration: none;
+    color: #000000;
+}
